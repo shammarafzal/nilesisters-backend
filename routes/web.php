@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/index', function () {
+    return view('index');
+})->middleware(['auth'])->name('index');
+
+Route::resource('resource', 'Admin/ResourceController')->middleware(['auth']);
+
+require __DIR__.'/auth.php';
