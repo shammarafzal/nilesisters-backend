@@ -17,6 +17,6 @@ Route::get('/index', function () {
     return view('index');
 })->middleware(['auth'])->name('index');
 
-Route::resource('resource', 'Admin/ResourceController')->middleware(['auth']);
+Route::resource('resource', 'Admin\ResourceController')->middleware(['auth']);
 
 require __DIR__ . '/auth.php';

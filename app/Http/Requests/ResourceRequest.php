@@ -32,7 +32,7 @@ class ResourceRequest extends FormRequest
         ], function () {
             if (request()->hasFile(request()->file)) {
                 request()->validate([
-                    'file' => 'required|file|image',
+                    'file' => 'required|file',
                 ]);
             }
             if (request()->hasFile(request()->icon)) {

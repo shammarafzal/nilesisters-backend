@@ -21,7 +21,7 @@
                 <a href="{{ route('index') }}"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Dashboard</span></a>
             </li>
             <li>
-                <a href=""> <i data-feather="user" class="align-self-center menu-icon"></i><span>Users</span></a>
+                <a href="{{ route('resource.index') }}"> <i data-feather="user" class="align-self-center menu-icon"></i><span>Resources</span></a>
             </li>
             <li>
                 <a href="javascript: void(0);"> <i data-feather="grid" class="align-self-center menu-icon"></i><span>Products</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>

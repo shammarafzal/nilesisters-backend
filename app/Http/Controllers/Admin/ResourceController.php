@@ -18,9 +18,9 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        $resource = Resource::all();
+        $resources = Resource::all();
         return view('resource.index', [
-            'resource' => $resource,
+            'resources' => $resources,
         ]);
     }
 
@@ -97,10 +97,11 @@ class ResourceController extends Controller
         return redirect(route('resource.index'));
     }
 
-    public function storeImage($category)
+    public function storeImage($resource)
     {
-        $category->update([
-            'icon' => $this->imagePath('icon', 'category', $category),
+        $resource->update([
+            'icon' => $this->imagePath('icon', 'resource', $resource),
+            'file' => $this->imagePath('file', 'resource', $resource),
         ]);
     }
 }

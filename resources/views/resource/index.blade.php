@@ -44,7 +44,6 @@
                                     <th>Context</th>
                                     <th>Format</th>
                                     <th>Total Pages</th>
-
                                     <th>Icon</th>
                                     <th>Action</th>
                                 </tr>
@@ -60,8 +59,9 @@
                                     <td>{{ $resource->total_pages }}</td>
                                     @if(isset($resource->icon))
                                     <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$resource->icon) }}"></td>>
+                                    @else
+                                    <td></td>
                                     @endif
-                                    <td>{{ $resource->icon }}</td>
                                     <td>
                                         <div class="row">
                                             <a href="{{ route('resource.edit', ['resource' => $resource]) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">

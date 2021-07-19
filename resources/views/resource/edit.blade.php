@@ -45,15 +45,6 @@
                     </div>
                     <!--end card-body-->
                     <div class="card-header">
-                        <h4 class="card-title">Resource</h4>
-                    </div>
-                    <!--end card-header-->
-                    <div class="card-body">
-                        <input type="file" id="input-file-now" name="icon" class="dropify" />
-                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('icon') }}</div>
-                    </div>
-                    <!--end card-body-->
-                    <div class="card-header">
                         <h4 class="card-title">Resource File</h4>
                     </div>
                     <!--end card-header-->
@@ -72,7 +63,7 @@
                                 <div class="form-group row">
                                     <label for="resource_name" class="col-sm-2 col-form-label text-right">Resource Name</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('title') }}" name="resource_name" id="validatedCustomFile" placeholder="Resource Name">
+                                        <input class="form-control" type="text" value="{{ $resource->title }}" name="title" id="validatedCustomFile" placeholder="Resource Name">
                                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('title') }}</div>
                                     </div>
                                 </div>
@@ -81,7 +72,7 @@
                                 <div class="form-group row">
                                     <label for="edition" class="col-sm-2 col-form-label text-right">Edition</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('title') }}" name="edition" id="validatedCustomFile" placeholder="Edition">
+                                        <input class="form-control" type="text" value="{{ $resource->edition }}" name="edition" id="validatedCustomFile" placeholder="Edition">
                                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('edition') }}</div>
                                     </div>
                                 </div>
@@ -90,7 +81,7 @@
                                 <div class="form-group row">
                                     <label for="context" class="col-sm-2 col-form-label text-right">Context</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('context') }}" name="context" id="validatedCustomFile" placeholder="Context">
+                                        <input class="form-control" type="text" value="{{ $resource->context }}" name="context" id="validatedCustomFile" placeholder="Context">
                                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('context') }}</div>
                                     </div>
                                 </div>
@@ -99,7 +90,7 @@
                                 <div class="form-group row">
                                     <label for="format" class="col-sm-2 col-form-label text-right">Format</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('format') }}" name="format" id="validatedCustomFile" placeholder="Format">
+                                        <input class="form-control" type="text" value="{{ $resource->format }}" name="format" id="validatedCustomFile" placeholder="Format">
                                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('format') }}</div>
                                     </div>
                                 </div>
@@ -108,7 +99,7 @@
                                 <div class="form-group row">
                                     <label for="total_pages" class="col-sm-2 col-form-label text-right">Total Pages</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('total_pages') }}" name="category_name" id="validatedCustomFile" placeholder="Total Pages">
+                                        <input class="form-control" type="text" value="{{ $resource->total_pages }}" name="total_pages" id="validatedCustomFile" placeholder="Total Pages">
                                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('total_pages') }}</div>
                                     </div>
                                 </div>
