@@ -18,5 +18,9 @@ Route::get('/index', function () {
 })->middleware(['auth'])->name('index');
 
 Route::resource('resource', 'Admin\ResourceController')->middleware(['auth']);
-
+Route::resource('event', 'Admin\EventController')->middleware(['auth']);
+Route::resource('video', 'Admin\VideoController')->middleware(['auth']);
+Route::resource('staff', 'Admin\StaffController')->middleware(['auth']);
+Route::resource('about', 'Admin\AboutController')->middleware(['auth']);
+Route::resource('contact', 'Admin\StaffController')->middleware(['auth']);
 require __DIR__ . '/auth.php';

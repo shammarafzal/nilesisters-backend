@@ -39,7 +39,7 @@
                         <img src="{{ asset('storage/'.$resource->icon) }}" style="height: 300px; width: auto" alt="" class="img-fluid mb-3">
                         <div class="custom-file mb-3">
                             <input type="file" name="icon" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+                            <label class="custom-file-label" for="customFile">Choose Image</label>
                         </div>
                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('icon') }}</div>
                     </div>
@@ -49,7 +49,11 @@
                     </div>
                     <!--end card-header-->
                     <div class="card-body">
-                        <input type="file" id="input-file-now" name="file" class="dropify" />
+                        <img src="{{ asset('storage/'.$resource->file) }}" style="height: 300px; width: auto" alt="" class="img-fluid mb-3">
+                        <div class="custom-file mb-3">
+                            <input type="file" name="file" class="custom-file-input" id="customFile1">
+                            <label class="custom-file-label" for="customFile1">Choose file</label>
+                        </div>
                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('file') }}</div>
                     </div>
                     <!--end card-body-->
