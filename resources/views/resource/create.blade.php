@@ -28,10 +28,10 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                <form method="post" action="{{route('category.store')}}" enctype="multipart/form-data">
+                <form method="post" action="{{route('resource.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="card-header">
-                        <h4 class="card-title">Category Icon</h4>
+                        <h4 class="card-title">Resource Icon</h4>
                     </div>
                     <!--end card-header-->
                     <div class="card-body">
@@ -40,17 +40,62 @@
                     </div>
                     <!--end card-body-->
                     <div class="card-header">
-                        <h4 class="card-title">Category</h4>
+                        <h4 class="card-title">Resource File</h4>
+                    </div>
+                    <!--end card-header-->
+                    <div class="card-body">
+                        <input type="file" id="input-file-now" name="file" class="dropify" />
+                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('file') }}</div>
+                    </div>
+                    <!--end card-body-->
+                    <div class="card-header">
+                        <h4 class="card-title">Resource</h4>
                     </div>
                     <!--end card-header-->
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group row">
-                                    <label for="category_name" class="col-sm-2 col-form-label text-right">Category Name</label>
+                                    <label for="resource_name" class="col-sm-2 col-form-label text-right">Resource Name</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('category_name') }}" name="category_name" id="validatedCustomFile" placeholder="Category Name">
-                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('category_name') }}</div>
+                                        <input class="form-control" type="text" value="{{ old('title') }}" name="resource_name" id="validatedCustomFile" placeholder="Resource Name">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('title') }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <label for="edition" class="col-sm-2 col-form-label text-right">Edition</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="text" value="{{ old('title') }}" name="edition" id="validatedCustomFile" placeholder="Edition">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('edition') }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <label for="context" class="col-sm-2 col-form-label text-right">Context</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="text" value="{{ old('context') }}" name="context" id="validatedCustomFile" placeholder="Context">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('context') }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <label for="format" class="col-sm-2 col-form-label text-right">Format</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="text" value="{{ old('format') }}" name="format" id="validatedCustomFile" placeholder="Format">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('format') }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <label for="total_pages" class="col-sm-2 col-form-label text-right">Total Pages</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="text" value="{{ old('total_pages') }}" name="category_name" id="validatedCustomFile" placeholder="Total Pages">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('total_pages') }}</div>
                                     </div>
                                 </div>
                             </div>

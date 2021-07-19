@@ -25,20 +25,19 @@ class ResourceRequest extends FormRequest
     {
         return tap([
             'title' => 'required',
-            'contact' => 'required',
-            'edition'=> 'required',
+            'edition' => 'required',
+            'context' => 'required',
             'format' => 'required',
-            'page_size' => 'required',
-            'page_count' => 'required',
-        ], function (){
-            if(request()->hasFile(request()->pdf)){
+            'total_pages' => 'required',
+        ], function () {
+            if (request()->hasFile(request()->file)) {
                 request()->validate([
-                    'pdf' => 'required|file|image',
+                    'file' => 'required|file|image',
                 ]);
             }
-            if(request()->hasFile(request()->pdf_icon)){
+            if (request()->hasFile(request()->icon)) {
                 request()->validate([
-                    'pdf_icon' => 'required|file|image',
+                    'icon' => 'required|file|image',
                 ]);
             }
         });

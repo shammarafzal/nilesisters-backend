@@ -18,7 +18,10 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        //
+        $resource = Resource::all();
+        return view('resource.index', [
+            'resource' => $resource,
+        ]);
     }
 
     /**
@@ -28,7 +31,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        //
+        return view('resource.create');
     }
 
     /**
@@ -39,7 +42,9 @@ class ResourceController extends Controller
      */
     public function store(ResourceRequest $request)
     {
-        //
+        $resource = Resource::create($request->all());
+        $this->storeImage($resource);
+        return redirect(route('resource.index'));
     }
 
     /**
@@ -61,7 +66,9 @@ class ResourceController extends Controller
      */
     public function edit(Resource $resource)
     {
-        //
+        return view('resource.edit', [
+            'resource' => $resource,
+        ]);
     }
 
     /**
@@ -73,7 +80,9 @@ class ResourceController extends Controller
      */
     public function update(ResourceRequest $request, Resource $resource)
     {
-        //
+        $resource->update($request->all());
+        $this->storeImage($resource);
+        return redirect(route('resource.index'));
     }
 
     /**
@@ -84,10 +93,12 @@ class ResourceController extends Controller
      */
     public function destroy(Resource $resource)
     {
-        //
+        $resource->delete();
+        return redirect(route('resource.index'));
     }
 
-    public function storeImage($category){
+    public function storeImage($category)
+    {
         $category->update([
             'icon' => $this->imagePath('icon', 'category', $category),
         ]);

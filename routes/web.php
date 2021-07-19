@@ -19,4 +19,4 @@ Route::get('/index', function () {
 
 Route::resource('resource', 'Admin/ResourceController')->middleware(['auth']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
