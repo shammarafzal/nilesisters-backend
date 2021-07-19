@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateResourcesTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateResourcesTable extends Migration
      */
     public function up()
     {
-        Schema::create('resources', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('edition');
-            $table->string('context');
-            $table->string('format');
-            $table->string('total_pages');
-            $table->string('file');
-            $table->string('icon');
+            $table->string('date');
+            $table->string('time');
+            $table->string('location');
+            $table->string('fee');
+            $table->string('benefits');
+            $table->string('details');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateResourcesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('resources');
+        Schema::dropIfExists('events');
     }
 }

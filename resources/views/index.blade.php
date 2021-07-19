@@ -10,10 +10,11 @@
                     <div class="col">
                         <h4 class="page-title">Analytics</h4>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0);">Al-Haram Furniture's</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Nilesisters</a></li>
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
-                    </div><!--end col-->
+                    </div>
+                    <!--end col-->
                     <div class="col-auto align-self-center">
                         <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
                             <span class="ay-name" id="Day_Name">Today:</span>&nbsp;
@@ -23,11 +24,16 @@
                         <a href="#" class="btn btn-sm btn-outline-primary">
                             <i data-feather="download" class="align-self-center icon-xs"></i>
                         </a>
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end page-title-box-->
-        </div><!--end col-->
-    </div><!--end row-->
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+            </div>
+            <!--end page-title-box-->
+        </div>
+        <!--end col-->
+    </div>
+    <!--end row-->
     <!-- end page title end breadcrumb -->
     <div class="row">
         <div class="col-lg-9">
@@ -37,27 +43,36 @@
                         <div class="card-body">
                             <div class="row d-flex justify-content-center">
                                 <div class="col">
-                                    <p class="text-dark mb-0 font-weight-semibold">Products</p>
+                                    <p class="text-dark mb-0 font-weight-semibold">Users</p>
                                     <h3 class="m-0">100</h3>
                                 </div>
                             </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div> <!--end col-->
+                        </div>
+                        <!--end card-body-->
+                    </div>
+                    <!--end card-->
+                </div>
+                <!--end col-->
                 <div class="col-md-6 col-lg-3">
                     <div class="card report-card">
                         <div class="card-body">
                             <div class="row d-flex justify-content-center">
                                 <div class="col">
-                                    <p class="text-dark mb-0 font-weight-semibold">Companies</p>
+                                    <p class="text-dark mb-0 font-weight-semibold">Posts</p>
                                     <h3 class="m-0">20</h3>
                                 </div>
                             </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div> <!--end col-->
-            </div><!--end row-->
-        </div><!--end col-->
-    </div><!--end row-->
+                        </div>
+                        <!--end card-body-->
+                    </div>
+                    <!--end card-->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end col-->
+    </div>
+    <!--end row-->
 </div><!-- container -->
 @endsection

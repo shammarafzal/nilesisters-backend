@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Resource extends Model
+class Contact extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'title',
-        'edition',
-        'context',
-        'format',
-        'total_pages',
-        'file',
-        'icon',
+        'office_name',
+        'address',
+        'english_phone',
+        'spanish_phone',
+        'email',
+        'facebook',
+        'instagram',
     ];
 }

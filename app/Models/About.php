@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Resource extends Model
+class About extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'title',
-        'edition',
-        'context',
-        'format',
-        'total_pages',
-        'file',
-        'icon',
+        'image',
+        'description',
+        'mission',
+        'history',
     ];
 }
