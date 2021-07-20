@@ -68,20 +68,20 @@
                                                 <i class="las la-ellipsis-v font-20 text-muted"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel11">
-                                                @if($post->order_status != 'Rejected')
-                                                <form id="{{ 'reject_'.$post->id }}" method="post" action="{{ route('post.show', ['post' => $post]) }}">
+                                                @if($post->is_approved != 'Rejected')
+                                                <form id="{{ 'reject_'.$post->id }}" method="post" action="{{ route('post.updateApprove', ['post' => $post]) }}">
                                                     @csrf
                                                     @method('PATCH')
-                                                    <input type="hidden" name="order_status" value="2">
+                                                    <input type="hidden" name="is_approved" value="2">
                                                     <a class="dropdown-item" style="cursor: pointer;" onclick="document.getElementById('{{'reject_'.$post->id}}').submit()">Reject</a>
                                                 </form>
                                                 @endif
-                                                @if($post->order_status != 'Confirmed')
-                                                <form id="{{ 'confirm_'.$post->id }}" method="post" action="{{ route('post.show', ['post' => $post]) }}">
+                                                @if($post->is_approved != 'Approved')
+                                                <form id="{{ 'approve_'.$post->id }}" method="post" action="{{ route('post.updateApprove', ['post' => $post]) }}">
                                                     @csrf
                                                     @method('PATCH')
-                                                    <input type="hidden" name="order_status" value="1">
-                                                    <a class="dropdown-item" style="cursor: pointer;" onclick="document.getElementById('{{'confirm_'.$post->id}}').submit()">Confirmed</a>
+                                                    <input type="hidden" name="is_approved" value="1">
+                                                    <a class="dropdown-item" style="cursor: pointer;" onclick="document.getElementById('{{'approve_'.$post->id}}').submit()">Approved</a>
                                                 </form>
                                                 @endif
                                             </div>

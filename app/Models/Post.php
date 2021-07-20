@@ -13,6 +13,10 @@ class Post extends Model
         'is_approved',
         'user_id',
     ];
+
+    public function getIsApprovedAttribute($attribute){
+        return $this->isApprovedOptions()[$attribute] ?? 0;
+    }
     public function isApprovedOptions()
     {
         return [
