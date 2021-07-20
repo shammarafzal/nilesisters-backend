@@ -13,17 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return redirect(route('login'));
+});
+
 Route::get('/index', function () {
     return view('index');
-})->middleware(['auth'])->name('index');
+})->middleware(['is_admin'])->name('index');
 
-Route::resource('resource', 'Admin\ResourceController')->middleware(['auth']);
-Route::resource('event', 'Admin\EventController')->middleware(['auth']);
-Route::resource('video', 'Admin\VideoController')->middleware(['auth']);
-Route::resource('staff', 'Admin\StaffController')->middleware(['auth']);
-Route::resource('about', 'Admin\AboutController')->middleware(['auth']);
-Route::resource('contact', 'Admin\ContactController')->middleware(['auth']);
-Route::resource('homepage', 'Admin\HomePageController')->middleware(['auth']);
-Route::resource('user', 'Admin\UserController')->middleware(['auth']);
-Route::resource('contactus', 'Admin\ContactusController')->middleware(['auth']);
+Route::resource('resource', 'Admin\ResourceController')->middleware(['is_admin']);
+Route::resource('event', 'Admin\EventController')->middleware(['is_admin']);
+Route::resource('video', 'Admin\VideoController')->middleware(['is_admin']);
+Route::resource('staff', 'Admin\StaffController')->middleware(['is_admin']);
+Route::resource('about', 'Admin\AboutController')->middleware(['is_admin']);
+Route::resource('contact', 'Admin\ContactController')->middleware(['is_admin']);
+Route::resource('homepage', 'Admin\HomePageController')->middleware(['is_admin']);
+Route::resource('user', 'Admin\UserController')->middleware(['is_admin']);
+Route::resource('contactus', 'Admin\ContactusController')->middleware(['is_admin']);
 require __DIR__ . '/auth.php';
