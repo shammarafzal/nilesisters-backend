@@ -24,3 +24,12 @@ Route::post('login', 'AuthController@login');
 Route::get('logout', 'AuthController@logout')->middleware('auth:api');
 Route::get('user', 'AuthController@user')->middleware('auth:api');
 Route::post('update/{user}', 'AuthController@update')->middleware('auth:api');
+
+Route::get('resources', 'APIController@ViewResources')->middleware('auth:api');
+Route::get('events', 'APIController@ViewEvents')->middleware('auth:api');
+Route::get('videos', 'APIController@ViewVideos')->middleware('auth:api');
+Route::get('staff', 'APIController@ViewStaff')->middleware('auth:api');
+Route::get('about', 'APIController@ViewAbout')->middleware('auth:api');
+Route::get('contact', 'APIController@ViewContact')->middleware('auth:api');
+Route::get('homepage', 'APIController@ViewhomePage')->middleware('auth:api');
+Route::post('contactus', 'ContactusController@store');

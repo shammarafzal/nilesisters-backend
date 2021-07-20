@@ -36,7 +36,16 @@
                 <a href="{{ route('about.index') }}"> <i data-feather="archive" class="align-self-center menu-icon"></i><span>About Us</span></a>
             </li>
             <li>
-                <a href="{{ route('contact.index') }}"> <i data-feather="phone" class="align-self-center menu-icon"></i><span>Contact Us</span></a>
+                <a href="{{ route('contact.index') }}"> <i data-feather="phone" class="align-self-center menu-icon"></i><span>our Contact</span></a>
+            </li>
+            <li>
+                <a href="{{ route('homepage.index') }}"> <i data-feather="home" class="align-self-center menu-icon"></i><span>Home Page</span></a>
+            </li>
+            <li>
+                <a href="{{ route('user.index') }}"> <i data-feather="users" class="align-self-center menu-icon"></i><span>Users</span></a>
+            </li>
+            <li>
+                <a href="{{ route('contactus.index') }}"> <i data-feather="phone-incoming" class="align-self-center menu-icon"></i><span>Contact us</span></a>
             </li>
         </ul>
     </div>

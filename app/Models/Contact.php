@@ -14,7 +14,9 @@ class Contact extends Model
         'english_phone',
         'spanish_phone',
         'email',
-        'facebook',
-        'instagram',
+        'facebook_page_1',
+        'facebook_page_2',
+        'instagram_page_1',
+        'instagram_page_2',
     ];
 }
