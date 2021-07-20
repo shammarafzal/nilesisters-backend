@@ -135,7 +135,6 @@ class AuthController extends Controller
     {
         $validator = tap(Validator::make($request->all(), [
             'name' => 'required',
-            'email' => 'required|email|exists:users',
         ]), function () {
             if (request()->hasFile(request()->image)) {
                 Validator::make(request()->all(), [
@@ -148,6 +147,7 @@ class AuthController extends Controller
                 ]);
             }
         });
+
 
         if ($validator->fails()) {
             $message = $validator->errors();
@@ -162,9 +162,11 @@ class AuthController extends Controller
                 'phone' => $request->input('phone') ?? '',
             ]);
             $this->storeImage($user);
+            //            $token = $user->createToken('app')->accessToken;
             return response([
                 'status' => true,
                 'message' => 'Success',
+                //                'token' => $token,
                 'user' => $user
             ]);
         } catch (\Exception $exception) {
