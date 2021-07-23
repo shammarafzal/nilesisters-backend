@@ -47,7 +47,7 @@ class APIController extends Controller
     }
     public function ViewAbout()
     {
-        $about = About::all();
+        $about = About::latest()->first();
         return response([
             'status' => true,
             'data' => $about,

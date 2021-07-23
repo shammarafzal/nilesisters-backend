@@ -45,7 +45,7 @@ class CommentController extends Controller
 
     public function ViewComments(Request $request)
     {
-        $comments = Comment::where('post_id', $request->post_id)->get();
+        $comments = Comment::with('user')->where('post_id', $request->post_id)->get();
         return response([
             'status' => true,
             'data' => $comments,

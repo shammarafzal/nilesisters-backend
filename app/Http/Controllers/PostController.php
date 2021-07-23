@@ -31,7 +31,7 @@ class PostController extends Controller
             return response([
                 'status' => true,
                 'message' => 'Your posts will be public once admin approve it',
-                'user' => $post
+                'post' => $post
             ]);
         } catch (\Exception $exception) {
             return response([
@@ -43,7 +43,7 @@ class PostController extends Controller
 
     public function ViewPosts()
     {
-        $posts = Post::where('is_approved', 1)->get();
+        $posts = Post::with('user')->where('is_approved', 1)->get();
         return response([
             'status' => true,
             'data' => $posts,
