@@ -48,7 +48,7 @@
                                 @foreach($posts as $post)
                                 <tr role="row">
                                     <td><a href="{{ route('post.show', ['post' => $post ]) }}">{{ $post->id }}</a></td>
-
+                                    <td>{{ $post->user->name }}</td>
                                     <td>{{ $post->post }}</td>
                                     <td>{{ $post->created_at }}</td>
                                     <td>
