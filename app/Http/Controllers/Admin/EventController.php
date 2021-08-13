@@ -6,9 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\EventRequest;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use App\Http\Traits\GeneralTrait;
 
 class EventController extends Controller
 {
+    use GeneralTrait;
     /**
      * Display a listing of the resource.
      *
