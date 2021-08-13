@@ -61,7 +61,11 @@
                                     <td>{{ $event->fee }}</td>
                                     <td>{{ $event->beenfits }}</td>
                                     <td>{{ $event->details }}</td>
-                                    <td>{{ $event->file }}</td>
+                                    @if(isset($staff->file))
+                                    <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$staff->file) }}"></td>
+                                    @else
+                                    <td></td>
+                                    @endif
                                     <td>
                                         <div class="row">
                                             <a href="{{ route('event.edit', ['event' => $event]) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">

@@ -54,7 +54,7 @@
                                     <td>{{ $staff->bio }}</td>
                                     <td>{{ $staff->designation }}</td>
                                     @if(isset($staff->image))
-                                    <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$staff->image) }}"></td>>
+                                    <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$staff->image) }}"></td>
                                     @else
                                     <td></td>
                                     @endif
