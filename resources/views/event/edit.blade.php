@@ -31,7 +31,18 @@
                 <form method="post" action="{{route('event.update', ['event' => $event])}}" enctype="multipart/form-data">
                     @method('PATCH')
                     @csrf
-
+                    <div class="card-header">
+                        <h4 class="card-title">Flyer</h4>
+                    </div>
+                    <!--end card-header-->
+                    <div class="card-body">
+                        <img src="{{ asset('storage/'.$event->file) }}" style="height: 300px; width: auto" alt="" class="img-fluid mb-3">
+                        <div class="custom-file mb-3">
+                            <input type="file" name="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose Image</label>
+                        </div>
+                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('file') }}</div>
+                    </div>
                     <div class="card-header">
                         <h4 class="card-title">Event</h4>
                     </div>

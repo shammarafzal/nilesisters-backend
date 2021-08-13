@@ -23,7 +23,7 @@ class EventRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        return tap([
             'title' => 'required',
             'date' => 'required',
             'time' => 'required',
@@ -31,6 +31,12 @@ class EventRequest extends FormRequest
             'fee' => 'required',
             'benefits' => 'required',
             'details' => 'required',
-        ];
+        ], function () {
+            if (request()->hasFile(request()->file)) {
+                request()->validate([
+                    'file' => 'required|file',
+                ]);
+            }
+        });
     }
 }

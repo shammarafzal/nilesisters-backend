@@ -16,5 +16,6 @@ class Event extends Model
         'fee',
         'benefits',
         'details',
+        'file'
     ];
 }

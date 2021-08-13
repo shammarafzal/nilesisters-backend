@@ -30,6 +30,14 @@
             <div class="card">
                 <form method="post" action="{{route('event.store')}}" enctype="multipart/form-data">
                     @csrf
+                    <div class="card-header">
+                        <h4 class="card-title">Flyer</h4>
+                    </div>
+                    <!--end card-header-->
+                    <div class="card-body">
+                        <input type="file" id="input-file-now" name="file" class="dropify" />
+                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('file') }}</div>
+                    </div>
 
                     <div class="card-header">
                         <h4 class="card-title">Event</h4>

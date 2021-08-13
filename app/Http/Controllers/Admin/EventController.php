@@ -41,6 +41,7 @@ class EventController extends Controller
     public function store(EventRequest $request)
     {
         $event = Event::create($request->all());
+        $this->storeImage($event);
         return redirect(route('event.index'));
     }
 
@@ -78,6 +79,7 @@ class EventController extends Controller
     public function update(EventRequest $request, Event $event)
     {
         $event->update($request->all());
+        $this->storeImage($event);
         return redirect(route('event.index'));
     }
 
@@ -91,5 +93,11 @@ class EventController extends Controller
     {
         $event->delete();
         return redirect(route('event.index'));
+    }
+    public function storeImage($event)
+    {
+        $event->update([
+            'file' => $this->imagePath('file', 'events', $event),
+        ]);
     }
 }

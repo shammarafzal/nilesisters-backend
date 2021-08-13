@@ -46,6 +46,7 @@
                                     <th>Fee</th>
                                     <th>Benefits</th>
                                     <th>Details</th>
+                                    <th>Flyer</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -60,6 +61,7 @@
                                     <td>{{ $event->fee }}</td>
                                     <td>{{ $event->beenfits }}</td>
                                     <td>{{ $event->details }}</td>
+                                    <td>{{ $event->file }}</td>
                                     <td>
                                         <div class="row">
                                             <a href="{{ route('event.edit', ['event' => $event]) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">

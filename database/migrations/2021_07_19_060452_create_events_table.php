@@ -22,6 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('fee');
             $table->string('benefits');
             $table->string('details');
+            $table->string('file');
             $table->timestamps();
         });
     }
