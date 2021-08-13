@@ -56,10 +56,10 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group row">
-                                    <label for="education" class="col-sm-2 col-form-label text-right">Education</label>
+                                    <label for="education" class="col-sm-2 col-form-label text-right">Bio</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('education') }}" name="education" id="validatedCustomFile" placeholder="Education">
-                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('education') }}</div>
+                                        <input class="form-control" type="text" value="{{ old('bio') }}" name="bio" id="validatedCustomFile" placeholder="Bio">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('bio') }}</div>
                                     </div>
                                 </div>
                             </div>
@@ -69,24 +69,6 @@
                                     <div class="col-sm">
                                         <input class="form-control" type="text" value="{{ old('designation') }}" name="designation" id="validatedCustomFile" placeholder="Designation">
                                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('designation') }}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group row">
-                                    <label for="age" class="col-sm-2 col-form-label text-right">Age</label>
-                                    <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('age') }}" name="age" id="validatedCustomFile" placeholder="Age">
-                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('age') }}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group row">
-                                    <label for="country" class="col-sm-2 col-form-label text-right">Country</label>
-                                    <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('country') }}" name="country" id="validatedCustomFile" placeholder="Country">
-                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('country') }}</div>
                                     </div>
                                 </div>
                             </div>

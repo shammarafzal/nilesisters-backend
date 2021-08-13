@@ -40,10 +40,8 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    <th>Education</th>
+                                    <th>Bio</th>
                                     <th>Designation</th>
-                                    <th>Age</th>
-                                    <th>Country</th>
                                     <th>Image</th>
                                     <th>Action</th>
                                 </tr>
@@ -53,10 +51,8 @@
                                 <tr role="row">
                                     <td>{{ $staff->id }}</td>
                                     <td>{{ $staff->name }}</td>
-                                    <td>{{ $staff->education }}</td>
+                                    <td>{{ $staff->bio }}</td>
                                     <td>{{ $staff->designation }}</td>
-                                    <td>{{ $staff->age }}</td>
-                                    <td>{{ $staff->country }}</td>
                                     @if(isset($staff->image))
                                     <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$staff->image) }}"></td>>
                                     @else

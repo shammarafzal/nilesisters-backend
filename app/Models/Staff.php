@@ -10,10 +10,8 @@ class Staff extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'education',
         'designation',
+        'bio',
         'image',
-        'age',
-        'country',
     ];
 }

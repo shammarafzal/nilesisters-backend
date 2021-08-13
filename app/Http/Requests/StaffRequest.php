@@ -25,10 +25,8 @@ class StaffRequest extends FormRequest
     {
         return tap([
             'name' => 'required',
-            'education' => 'required',
+            'bio' => 'required',
             'designation' => 'required',
-            'age' => 'required',
-            'country' => 'required',
         ], function () {
             if (request()->hasFile(request()->image)) {
                 request()->validate([
