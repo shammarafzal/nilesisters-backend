@@ -62,7 +62,7 @@
                                     <td>{{ $event->beenfits }}</td>
                                     <td>{{ $event->details }}</td>
                                     @if(isset($event->file))
-                                    <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$staff->file) }}"></td>
+                                    <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$event->file) }}"></td>
                                     @else
                                     <td></td>
                                     @endif
