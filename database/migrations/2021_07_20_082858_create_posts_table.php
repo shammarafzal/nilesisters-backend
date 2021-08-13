@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('post');
-            $table->string('is_approved')->default(0);
+            $table->string('is_approved')->default(1);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
