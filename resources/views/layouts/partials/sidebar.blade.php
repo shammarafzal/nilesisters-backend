@@ -45,10 +45,10 @@
                 <a href="{{ route('user.index') }}"> <i data-feather="users" class="align-self-center menu-icon"></i><span>Users</span></a>
             </li>
             <li>
-                <a href="{{ route('contactus.index') }}"> <i data-feather="phone-incoming" class="align-self-center menu-icon"></i><span>Contact us</span></a>
+                <a href="{{ route('contactus.index') }}"> <i data-feather="phone-incoming" class="align-self-center menu-icon"></i><span>Message us</span></a>
             </li>
             <li>
-                <a href="{{ route('post.index') }}"> <i data-feather="message-circle" class="align-self-center menu-icon"></i><span>Posts</span></a>
+                <a href="{{ route('post.index') }}"> <i data-feather="message-circle" class="align-self-center menu-icon"></i><span>Community</span></a>
             </li>
         </ul>
     </div>

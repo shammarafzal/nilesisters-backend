@@ -8,9 +8,9 @@
             <div class="page-title-box">
                 <div class="row">
                     <div class="col">
-                        <h4 class="page-title">Posts</h4>
+                        <h4 class="page-title">Community</h4>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0);">Posts</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Community</a></li>
                             <li class="breadcrumb-item active">List</li>
                         </ol>
                     </div>
@@ -28,7 +28,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title mt-4">Posts</div>
+                    <div class="card-title mt-4">Community</div>
                 </div>
                 <!--end card-header-->
                 <div class="card-body">
