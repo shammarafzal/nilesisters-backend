@@ -30,7 +30,7 @@ class PostController extends Controller
             ]);
             return response([
                 'status' => true,
-                'message' => 'Your posts will be public once admin approve it',
+                'message' => 'Post Added',
                 'post' => $post
             ]);
         } catch (\Exception $exception) {
