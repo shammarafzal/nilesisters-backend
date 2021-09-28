@@ -33,4 +33,5 @@ Route::resource('contactus', 'Admin\ContactusController')->middleware(['is_admin
 Route::resource('post', 'Admin\PostController')->middleware(['is_admin']);
 Route::patch('post/updateApprove/{post}', 'Admin\PostController@updateApprove')->name('post.updateApprove')->middleware(['is_admin']);
 Route::resource('comment', 'Admin\CommentController')->middleware(['is_admin']);
+Route::patch('comment/updateStatus/{comment}', 'Admin\CommentController@updateStatus')->name('comment.updateStatus')->middleware(['is_admin']);
 require __DIR__ . '/auth.php';

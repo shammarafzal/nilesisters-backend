@@ -12,7 +12,21 @@ class Comment extends Model
         'comment',
         'post_id',
         'user_id',
+        'status',
     ];
+
+    public function getStatusAttribute($attribute){
+        return $this->statusOptions()[$attribute] ?? 0;
+    }
+    public function statusOptions()
+    {
+        return [
+            2 => 'Rejected',
+            1 => 'Approved',
+            0 => 'Pending',
+        ];
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

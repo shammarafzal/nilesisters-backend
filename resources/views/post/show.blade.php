@@ -36,6 +36,7 @@
                                     <th>User Name</th>
                                     <th>Comment</th>
                                     <th>Comment Date</th>
+                                    <th>Status</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -46,16 +47,45 @@
                                         <td>{{ $comment->user->name }}</td>
                                         <td>{{ $comment->comment }}</td>
                                         <td>{{ $comment->created_at }}</td>
+                                        <td>
+                                            @if($comment->status == 'Approved')
+                                                <span class="badge badge-soft-success">{{ $comment->status }}</span>
+                                            @endif
+                                            @if($comment->status == 'Rejected')
+                                                <span class="badge badge-soft-danger">{{ $comment->status }}</span>
+                                            @endif
+                                            @if($comment->status == 'Pending')
+                                                <span class="badge badge-soft-info">{{ $comment->status }}</span>
+                                            @endif
+                                        </td>
                                         <td class="text-left">
-                                            <div class="row">
-                                                <form id="{{ 'delete_'.$comment->id }}" method="post" action="{{ route('comment.update', ['comment' => $comment]) }}">
-                                                    @method('patch')
-                                                    @csrf
-                                                    <input value="{{ $post->id }}" name="post" type="hidden">
-                                                    <a onclick="document.getElementById('{{ 'delete_'.$comment->id }}').submit()" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </form>
+                                            <div class="dropdown d-inline-block">
+                                                <a class="dropdown-toggle arrow-none" id="dLabel11" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                                    <i class="las la-ellipsis-v font-20 text-muted"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel11">
+                                                    @if($comment->status != 'Rejected')
+                                                        <form id="{{ 'reject_'.$comment->id }}" method="post" action="{{ route('comment.updateStatus', ['comment' => $comment]) }}">
+                                                            @csrf
+                                                            @method('PATCH')
+                                                            <input type="hidden" name="status" value="2">
+                                                            <a class="dropdown-item" style="cursor: pointer;" onclick="document.getElementById('{{'reject_'.$comment->id}}').submit()">Reject</a>
+                                                        </form>
+                                                    @endif
+                                                    @if($comment->status != 'Approved')
+                                                        <form id="{{ 'approve_'.$comment->id }}" method="post" action="{{ route('comment.updateStatus', ['comment' => $comment]) }}">
+                                                            @csrf
+                                                            @method('PATCH')
+                                                            <input type="hidden" name="status" value="1">
+                                                            <a class="dropdown-item" style="cursor: pointer;" onclick="document.getElementById('{{'approve_'.$comment->id}}').submit()">Approved</a>
+                                                        </form>
+                                                    @endif
+                                                    <form id="{{ 'delete_'.$comment->id }}" method="post" action="{{ route('comment.destroy', ['comment' => $comment]) }}">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <a style="cursor: pointer;" onclick="document.getElementById('{{ 'delete_'.$comment->id }}').submit()" class="dropdown-item">Delete</a>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>

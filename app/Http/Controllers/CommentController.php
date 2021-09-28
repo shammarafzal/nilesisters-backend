@@ -28,6 +28,7 @@ class CommentController extends Controller
             $post = Comment::create([
                 'comment' => $request->input('comment'),
                 'post_id' => $request->input('post_id'),
+                'status' => 0,
                 'user_id' => $user
             ]);
             return response([
@@ -45,7 +46,7 @@ class CommentController extends Controller
 
     public function ViewComments(Request $request)
     {
-        $comments = Comment::with('user')->where('post_id', $request->post_id)->get();
+        $comments = Comment::with('user')->where('post_id', $request->post_id)->where('status', 1)->get();
         return response([
             'status' => true,
             'data' => $comments,

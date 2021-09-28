@@ -71,11 +71,7 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        $comment->delete();
-        $post = Post::where('id', $request->post)->first();
-        return view('post.show', [
-            'post' => $post,
-        ]);
+
     }
 
     /**
@@ -86,6 +82,20 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
+        $post = Post::where('id', $comment->post_id)->first();
+        $comment->delete();
+        return redirect(route('post.show', [
+            'post' => $post,
+        ]));
+    }
 
+    public function updateStatus(Request $request, Comment $comment){
+        $comment->update([
+            'status' => $request->status,
+        ]);
+        $post = Post::where('id', $comment->post_id)->first();
+        return redirect(route('post.show', [
+            'post' => $post,
+        ]));
     }
 }
