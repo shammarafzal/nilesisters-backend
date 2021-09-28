@@ -4,13 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\VideoRequest;
-use App\Http\Traits\GeneralTrait;
 use App\Models\Videos;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
-    use GeneralTrait;
     /**
      * Display a listing of the resource.
      *
@@ -43,7 +41,6 @@ class VideoController extends Controller
     public function store(VideoRequest $request)
     {
         $video = Videos::create($request->all());
-        $this->storeImage($video);
         return redirect(route('video.index'));
     }
 
@@ -81,7 +78,6 @@ class VideoController extends Controller
     public function update(VideoRequest $request, Videos $video)
     {
         $video->update($request->all());
-        $this->storeImage($video);
         return redirect(route('video.index'));
     }
 
@@ -95,12 +91,5 @@ class VideoController extends Controller
     {
         $video->delete();
         return redirect(route('video.index'));
-    }
-
-    public function storeImage($video)
-    {
-        $video->update([
-            'file' => $this->imagePath('file', 'video', $video),
-        ]);
     }
 }

@@ -40,7 +40,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Title</th>
-                                    <th>File</th>
+                                    <th>Link</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -49,11 +49,7 @@
                                 <tr role="row">
                                     <td>{{ $video->id }}</td>
                                     <td>{{ $video->title }}</td>
-                                    @if(isset($video->file))
-                                    <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$video->file) }}"></td>>
-                                    @else
-                                    <td></td>
-                                    @endif
+                                    <td>{{ $video->link }}</td>
                                     <td>
                                         <div class="row">
                                             <a href="{{ route('video.edit', ['video' => $video]) }}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">

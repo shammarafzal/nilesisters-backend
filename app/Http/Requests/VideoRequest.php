@@ -23,14 +23,9 @@ class VideoRequest extends FormRequest
      */
     public function rules()
     {
-        return tap([
+        return [
             'title' => 'required',
-        ], function () {
-            if (request()->hasFile(request()->file)) {
-                request()->validate([
-                    'file' => 'required|file',
-                ]);
-            }
-        });
+            'link' => 'required',
+        ];
     }
 }

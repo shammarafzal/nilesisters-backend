@@ -30,14 +30,7 @@
             <div class="card">
                 <form method="post" action="{{route('video.store')}}" enctype="multipart/form-data">
                     @csrf
-                    <div class="card-header">
-                        <h4 class="card-title">Video File</h4>
-                    </div>
-                    <!--end card-header-->
-                    <div class="card-body">
-                        <input type="file" id="input-file-now" name="file" class="dropify" />
-                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('file') }}</div>
-                    </div>
+
                     <div class="card-header">
                         <h4 class="card-title">Video</h4>
                     </div>
@@ -56,6 +49,19 @@
                         </div>
                     </div>
                     <!--end card-body-->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <label for="event_link" class="col-sm-2 col-form-label text-right">Video Link</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="text" value="{{ old('link') }}" name="link" id="validatedCustomFile" placeholder="Video Link">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('link') }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-header"></div>
                     <div class="card-body">
                         <div class="col-sm text-right ml-auto">
