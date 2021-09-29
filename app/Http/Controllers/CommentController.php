@@ -33,7 +33,7 @@ class CommentController extends Controller
             ]);
             return response([
                 'status' => true,
-                'message' => 'Comment Added',
+                'message' => 'Comment Will be visible once admin approved it!!!',
                 'user' => $post
             ]);
         } catch (\Exception $exception) {
