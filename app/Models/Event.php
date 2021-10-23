@@ -16,6 +16,8 @@ class Event extends Model
         'fee',
         'benefits',
         'details',
-        'file'
+        'file',
+        'address_latitude',
+        'address_longitude'
     ];
 }

@@ -23,6 +23,8 @@ class CreateEventsTable extends Migration
             $table->longText('benefits');
             $table->longText('details');
             $table->string('file');
+            $table->double('address_latitude')->nullable();
+            $table->double('address_longitude')->nullable();
             $table->timestamps();
         });
     }
