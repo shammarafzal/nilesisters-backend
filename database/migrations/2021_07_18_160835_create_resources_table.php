@@ -17,7 +17,7 @@ class CreateResourcesTable extends Migration
             $table->id();
             $table->longText('title');
             $table->string('edition');
-            $table->string('context');
+            $table->longText('context');
             $table->string('format');
             $table->string('total_pages');
             $table->string('file');
