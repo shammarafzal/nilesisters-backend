@@ -72,7 +72,16 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <label for="news_link" class="col-sm-2 col-form-label text-right">Link</label>
+                                    <div class="col-sm">
+                                        <input class="form-control" type="text" value="{{ old('news_link') }}" name="news_link" id="validatedCustomFile" placeholder="Link">
+                                        <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('news_link') }}</div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <!--end card-body-->

@@ -19,6 +19,7 @@ class CreateHomePagesTable extends Migration
             $table->string('image');
             $table->longText('description');
             $table->string('category');
+            $table->longText('news_link');
             $table->timestamps();
         });
     }

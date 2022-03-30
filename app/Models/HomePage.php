@@ -13,5 +13,6 @@ class HomePage extends Model
         'image',
         'description',
         'category',
+        'news_link'
     ];
 }

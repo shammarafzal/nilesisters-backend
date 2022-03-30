@@ -42,6 +42,7 @@
                                     <th>Title</th>
                                     <th>Description</th>
                                     <th>Category</th>
+                                    <th>Link</th>
                                     <th>Image</th>
                                     <th>Action</th>
                                 </tr>
@@ -53,6 +54,7 @@
                                     <td>{{ $homepage->title }}</td>
                                     <td>{{ $homepage->description }}</td>
                                     <td>{{ $homepage->category }}</td>
+                                    <td>{{ $homepage->link }}</td>
                                     @if(isset($homepage->image))
                                     <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$homepage->image) }}"></td>>
                                     @else
