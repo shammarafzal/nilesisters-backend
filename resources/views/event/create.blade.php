@@ -58,7 +58,7 @@
                                 <div class="form-group row">
                                     <label for="date" class="col-sm-2 col-form-label text-right">Date</label>
                                     <div class="col-sm">
-                                        <input class="form-control" type="text" value="{{ old('date') }}" name="date" id="validatedCustomFile" placeholder="Date Must Be In THis Format 22/05/2021 (DD/MM/YYYY)">
+                                        <input class="form-control" type="text" value="{{ old('date') }}" name="date" id="validatedCustomFile" placeholder="Date Must Be In THis Format 05/22/2021 (MM/DD/YYYY)">
                                         <div style="color: #ff0000; font-size: x-small; margin-top: 3px;">{{ $errors->first('date') }}</div>
                                     </div>
                                 </div>
