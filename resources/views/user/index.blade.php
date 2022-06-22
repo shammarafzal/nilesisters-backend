@@ -37,7 +37,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Image</th>
+                                    <!--<th>Image</th>-->
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
@@ -48,7 +48,7 @@
                                 @foreach($users as $user)
                                 <tr role="row">
                                     <td>{{ $user->id }}</td>
-                                    <td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$user->image) }}"></td>
+                                    <!--<td><img class="avatar-box" width="50px" height="50px" src="{{ asset('storage/'.$user->image) }}"></td>-->
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
