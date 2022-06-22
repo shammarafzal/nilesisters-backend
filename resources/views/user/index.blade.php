@@ -41,7 +41,7 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>Action</th>
+                                    <!--<th>Action</th>-->
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,17 +52,17 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
-                                    <td>
-                                        <div class="row">
-                                            <form id="{{ 'delete_'.$user->id }}" method="post" action="{{ route('user.destroy', ['user' => $user]) }}">
-                                                @method('DELETE')
-                                                @csrf
-                                                <a onclick="document.getElementById('{{ 'delete_'.$user->id }}').submit()" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </form>
-                                        </div>
-                                    </td>
+                                    <!--<td>-->
+                                    <!--    <div class="row">-->
+                                    <!--        <form id="{{ 'delete_'.$user->id }}" method="post" action="{{ route('user.destroy', ['user' => $user]) }}">-->
+                                    <!--            @method('DELETE')-->
+                                    <!--            @csrf-->
+                                    <!--            <a onclick="document.getElementById('{{ 'delete_'.$user->id }}').submit()" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">-->
+                                    <!--                <i class="fa fa-trash"></i>-->
+                                    <!--            </a>-->
+                                    <!--        </form>-->
+                                    <!--    </div>-->
+                                    <!--</td>-->
                                 </tr>
                                 @endforeach
                             </tbody>
